@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start-noflp",
+			"path": "project1",
+			"problemMatcher": [],
+			"label": "npm: start-noflp - project1",
+			"detail": "fiori run --open \"index.html?sap-ui-xx-viewCache=false\""
+		}
+	]
+}
