@@ -2,6 +2,17 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content >
+            <!--<List id="companyList" items="{/SCARRSet}" headerText="{i18n>company_list_header_txt}">
+                <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active">
+                    <ObjectAttribute id="urlAttr" text="{Url}"></ObjectAttribute>
+                    <ObjectAttribute id="curlAttr" text="{Currcode}"></ObjectAttribute>
+                </ObjectListItem>
+            </List-->
+
+            <List id="companyList" headerText="{i18n>company_list_header_txt}">
+            </List>
+
+        </content>
     </Page>
 </mvc:View>
