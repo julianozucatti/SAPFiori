@@ -3,9 +3,16 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <List id="companyList" items="{/SCARRSet}" headerText="{i18n>company_list_header_txt}">
-                <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active"  press="onListItemPress">
-                <ObjectAttribute id="carrAttr" text="{Carrid}"></ObjectAttribute>
+            <List id="companyList" items="{/SCARRSet}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{i18n>company_list_header_txt}" level="H2" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://create" text="Novo" press="onBtnCreatePress" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active" press="onListItemPress">
+                    <ObjectAttribute id="carrAttr" text="{Carrid}"></ObjectAttribute>
                     <ObjectAttribute id="conAttr" text="{Connid}"></ObjectAttribute>
                 </ObjectListItem>
             </List>

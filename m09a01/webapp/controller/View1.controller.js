@@ -1,6 +1,6 @@
 sap.ui.define([
     "moovi/m09a01/controller/BaseController"
-    
+
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -13,14 +13,19 @@ sap.ui.define([
 
             },
 
-            onListItemPress : function(oEvent){
+            onListItemPress: function (oEvent) {
                 var oItem, oCtx;
 
                 oItem = oEvent.getSource();
                 oCtx = oItem.getBindingContext();
 
-                this.getRouter().navTo("RouteCompanyDetail",{
-                    carrid : oCtx.getProperty("Carrid")
+                this.getRouter().navTo("RouteCompanyDetail", {
+                    carrid: oCtx.getProperty("Carrid")
+                });
+            },
+            onBtnCreatePress: function (oEvent) {
+                this.getRouter().navTo("RouteCompanyDetail", {
+                    carrid: "New"
                 });
             }
         });
